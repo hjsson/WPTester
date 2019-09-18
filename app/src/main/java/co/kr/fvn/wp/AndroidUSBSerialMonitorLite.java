@@ -28,6 +28,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.View.OnKeyListener;
+import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ListView;
@@ -125,6 +126,7 @@ public class AndroidUSBSerialMonitorLite extends Activity {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        getWindow().addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);
 
 /* FIXME : How to check that there is a title bar menu or not.
         // Should not set a Window.FEATURE_NO_TITLE on Honeycomb because a user cannot see menu button.
