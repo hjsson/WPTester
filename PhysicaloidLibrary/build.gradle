@@ -1,0 +1,22 @@
+apply plugin: 'android-library'
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: '*.jar')
+}
+
+android {
+    compileSdkVersion 18
+    buildToolsVersion '29.0.2'
+
+    defaultConfig {
+        minSdkVersion 12
+        targetSdkVersion 12
+    }
+
+    sourceSets {
+        main {
+            manifest.srcFile 'AndroidManifest.xml'
+            java.srcDirs = ['src']
+        }
+    }
+}
